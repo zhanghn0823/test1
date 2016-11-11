@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<table border="1" cellspacing="0" cellpadding="0" bgcolor="aqua" width=80%>
+			
+		
+			<script type="text/javascript">
+			/*	for (var i=1;i<=3;i++) {
+					document.write("<tr>");
+						for(var j=1;j<=30;j++){
+							document.write('<td>x</td>');
+						}
+					document.write("<tr>");
+				}*/
+			document.write('<hr color="red"/>')	;
+			document.write('<table border="1" cellspacing="0" cellpadding="0" bgcolor="#abcdef" width=80%>');
+			for(var i=1;i<=9;++i){
+				document.write('<tr>');
+					for(var j=1;j<=i;j++){
+						document.write('<td>'+i+'x'+j+'='+(i*j)+'</td>');
+					}
+				document.write('</tr>');
+			}
+			document.write('</table>');
+			document.write('<hr color="red"/>')	;
+			document.write('<table border="1" cellspacing="0" cellpadding="0" bgcolor="#abcdef" width=80%>');
+			for(var i=9;i>=1;--i){
+				document.write('<tr>');
+					for(var j=1;j<=i;j++){
+						document.write('<td>'+i+'x'+j+'='+(i*j)+'</td>');
+					}
+				document.write('</tr>');
+			}
+			document.write('</table>');
+			document.write('<hr color=darkgoldenrod/>');
+	// 百元买百鸡  ，公鸡5元每只，母鸡 3元每只，小鸡1元三只
+			for( var i=0 ;i<=20;i++){
+				for(var j=0;j<=33;j++){
+					for(var z=0;z<=100;z++){
+						if((i+j+z==100)&&(5*i+3*j+z/3==100)){
+							document.write('公鸡：'+i+'母鸡：'+j+'小鸡：'+z+'<hr/>');
+						}
+					}
+				}
+				
+			}
+		document.write('<hr color=mediumvioletred>');
+			for(var i=0;i<=20;i++){
+				for(var j=0;j<=33;j++){
+					var z=100-i-j;
+					if (z%3==0&&5*i+3*j+z/3==100) {
+						document.write('公鸡；'+i+'母鸡：'+j+'小鸡：'+z+'<hr/>');
+					}
+				}
+			}
+	
+	
+	
+			</script>
+		</table>
+	</body>
+</html>

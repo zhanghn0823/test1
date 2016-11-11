@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="box1"	style='background: #abcdef;border-image-width: 300px;height:300px;'	>
+			<input type="button" value="test1" id='btn1' />
+			
+		</div>
+		<script type="text/javascript">
+			var btn1=document.getElementById("btn1");
+			var box1=document.getElementById("box1");
+			btn1.onclick=function(){
+				alert('button clicked');
+		//取消冒泡
+				var e=e||window.event;
+				//w3c 取消冒泡
+				//e.stopPropagation();
+				//e.cancelBubble=true
+				//alert(e.cancleBUbble);
+				if (typeof e.cancleBubble=='undefined'){
+					e.stopPrapagation();
+				}else{
+					e.cancelBubble=true;
+				}
+			}
+			box1.onclicked=function(){
+				alert('div clicked');
+			}
+			document.body.onclick=function(){
+				alert('body clicked');
+			}
+			document.documentElement.onclick=function(){
+				alert('html clicked');
+			}
+			document.onclick=function(){
+				alert('document clicked');
+			}
+			//button-div-body-html-document 冒泡
+		</script>
+		
+	</body>
+</html>
